@@ -1,0 +1,37 @@
+{
+  "name": "cordova-plugin-k-usb-nfc",
+  "version": "0.0.1",
+  "description": "Cordova USB NFC card reader",
+  "peerDependencies": {
+    "rxjs": "5.5.11"
+  },
+  "cordova": {
+    "id": "cordova-plugin-k-usb-nfc",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "nfc",
+    "ACS",
+    "acr122u",
+    "HID",
+    "Omnikey",
+    "5022CL",
+    "card reader",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krish-dev/cordova-plugin-k-usb-nfc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krish-dev/cordova-plugin-k-usb-nfc/issues"
+  },
+  "main": "bundles/main.js",
+  "typings": "./types/index.d.ts",
+  "author": "Krishnendu Sekhar Das",
+  "license": "MIT"
+}

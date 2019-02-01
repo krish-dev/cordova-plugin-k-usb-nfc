@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-k-usb-nfc"
+    version="0.0.1">
+    <name>KUsbNfc</name>
+    <description>Cordova NFC Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,nfc,payment</keywords>
+
+    <js-module src="www/nfc.js" name="KUsbNfc">
+        <clobbers target="KUsbNfc"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="KUsbNfc">
+                <param name="android-package" value="in.co.indusnet.cordova.plugins.nfc.KUsbNfc"/>
+				<param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/KUsbNfc.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc"/>
+        <source-file src="src/android/EidCardCallback.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc"/>
+
+        <source-file src="src/android/usb/CCID.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc/usb"/>
+        <source-file src="src/android/usb/CCIDException.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc/usb"/>
+        <source-file src="src/android/usb/CardCallback.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc/usb"/>
+
+        <source-file src="src/android/diagnostic/CCIDDescriptor.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc/diagnostic"/>
+        <source-file src="src/android/diagnostic/EndPointDescriptor.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc/diagnostic"/>
+        <source-file src="src/android/diagnostic/InterfaceDescriptor.java" target-dir="src/in/co/indusnet/cordova/plugins/nfc/diagnostic"/>
+
+    </platform>
+</plugin>

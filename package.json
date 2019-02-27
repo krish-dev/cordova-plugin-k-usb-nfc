@@ -1,6 +1,6 @@
 {
   "name": "@krish-dev/cordova-plugin-k-usb-nfc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cordova USB NFC card reader",
   "peerDependencies": {
     "rxjs": "5.5.11"
